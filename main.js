@@ -39,3 +39,28 @@ new Swiper('.swiper-container', {
         }
     }
 })
+
+
+//Sticky Navigation
+window.onscroll =function(){
+    stickFunction()
+};
+
+
+// get the current value
+
+let navbar = document.getElementById("header")
+
+//get the navbar position
+let sticky = navbar.offsetTop;
+
+//sticky function
+
+function stickFunction(){
+    if(window.pageYOffset >= sticky){
+        navbar.classList.add("sticky");
+    }else{
+        navbar.classList.remove("sticky")
+    }
+}
+
